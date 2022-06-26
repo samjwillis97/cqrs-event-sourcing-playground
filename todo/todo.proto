@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option go_package = "./todo";
+
+message TodoCreated {
+  string title = 1;
+  string descriptions = 2;
+}
+
+message TodoDeleted {
+  uint64 id = 1;
+}
+
+message TodoTitleModified {
+  uint64 id = 1;
+  string title = 2;
+}
+
+message TodoDescriptionModified {
+  uint64 id = 1;
+  string description = 2;
+}
+
+message TodoInProgress {
+  uint64 id = 1;
+}
+
+message TodoDone {
+  uint64 id = 1;
+}
